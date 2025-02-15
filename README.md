@@ -42,7 +42,7 @@ Antes de ejecutar el proyecto, asegúrate de tener instalados los siguientes req
 
    ```bash
    git clone https://github.com/JuanCarlos92/Agencia-de-viajes.git
-   cd agencia-de-viajes-microservicios
+   cd agencia-de-viajes
    ```
 
 2. **Configura la base de datos MySQL**:
