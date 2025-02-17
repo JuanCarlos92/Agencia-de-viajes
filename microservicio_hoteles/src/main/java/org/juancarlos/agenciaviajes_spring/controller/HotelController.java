@@ -1,6 +1,6 @@
 package org.juancarlos.agenciaviajes_spring.controller;
 
-import org.juancarlos.agenciaviajes_spring.entity.Hotel;
+import org.juancarlos.agenciaviajes_spring.model.Hotel;
 import org.juancarlos.agenciaviajes_spring.service.HotelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -23,7 +23,7 @@ public class HotelController {
     public ResponseEntity<List<Hotel>> getAllHotels() {
         List<Hotel> hotels = hotelService.getHotels();
 
-        //objeto HttpHeaders = añadir encabezados
+        //HttpHeaders = añadir encabezados
         HttpHeaders headers = new HttpHeaders();
         headers.add("Hoteles", String.valueOf(hotels.size()));
         System.out.println(headers.get("Hoteles"));
@@ -35,7 +35,7 @@ public class HotelController {
     public ResponseEntity<Hotel> getHotelById(@PathVariable Long id) {
         Hotel hotel = hotelService.getHotel(id);
 
-        //objeto HttpHeaders = añadir encabezados
+        //HttpHeaders = añadir encabezados
         HttpHeaders headers = new HttpHeaders();
         headers.add("Hotel-ID", String.valueOf(id));
 

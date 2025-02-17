@@ -23,16 +23,13 @@ DROP TABLE IF EXISTS `reservas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `reservas` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `usuario` varchar(255) NOT NULL,
-  `vuelo_id` int NOT NULL,
-  `hotel_id` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `vuelo_id` (`vuelo_id`),
-  KEY `hotel_id` (`hotel_id`),
-  CONSTRAINT `reservas_ibfk_1` FOREIGN KEY (`vuelo_id`) REFERENCES `vuelos` (`id`),
-  CONSTRAINT `reservas_ibfk_2` FOREIGN KEY (`hotel_id`) REFERENCES `hoteles` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `idreserva` int unsigned NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) NOT NULL,
+  `dni` varchar(45) NOT NULL,
+  `hotel` int unsigned NOT NULL,
+  `vuelo` int unsigned NOT NULL,
+  PRIMARY KEY (`idreserva`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +38,7 @@ CREATE TABLE `reservas` (
 
 LOCK TABLES `reservas` WRITE;
 /*!40000 ALTER TABLE `reservas` DISABLE KEYS */;
+INSERT INTO `reservas` VALUES (1,'ggggggg','7777777',2,1);
 /*!40000 ALTER TABLE `reservas` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-02-15 14:34:04
+-- Dump completed on 2025-02-17 12:20:21

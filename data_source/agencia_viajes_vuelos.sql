@@ -23,11 +23,13 @@ DROP TABLE IF EXISTS `vuelos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `vuelos` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `numero_vuelo` varchar(50) NOT NULL,
-  `plazas_disponibles` int NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `idvuelo` int unsigned NOT NULL AUTO_INCREMENT,
+  `company` varchar(45) NOT NULL,
+  `fecha` varchar(45) NOT NULL,
+  `precio` double NOT NULL,
+  `plazas` int unsigned NOT NULL,
+  PRIMARY KEY (`idvuelo`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +38,7 @@ CREATE TABLE `vuelos` (
 
 LOCK TABLES `vuelos` WRITE;
 /*!40000 ALTER TABLE `vuelos` DISABLE KEYS */;
-INSERT INTO `vuelos` VALUES (1,'Vuelo 101',100),(2,'Vuelo 202',50);
+INSERT INTO `vuelos` VALUES (1,'Iberia','10-12-2017',200,9),(2,'Air Europa','11-12-2027',170,6);
 /*!40000 ALTER TABLE `vuelos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-02-15 14:34:04
+-- Dump completed on 2025-02-17 12:20:21

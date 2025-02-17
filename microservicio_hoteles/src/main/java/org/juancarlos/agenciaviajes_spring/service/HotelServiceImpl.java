@@ -1,6 +1,6 @@
 package org.juancarlos.agenciaviajes_spring.service;
 
-import org.juancarlos.agenciaviajes_spring.entity.Hotel;
+import org.juancarlos.agenciaviajes_spring.model.Hotel;
 import org.juancarlos.agenciaviajes_spring.repository.HotelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

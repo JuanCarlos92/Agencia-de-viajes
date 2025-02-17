@@ -1,6 +1,6 @@
 package org.juancarlos.agenciaviajes_spring.service;
 
-import org.juancarlos.agenciaviajes_spring.entity.Hotel;
+import org.juancarlos.agenciaviajes_spring.model.Hotel;
 
 import java.util.List;
 
